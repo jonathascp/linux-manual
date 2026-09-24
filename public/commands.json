@@ -1,0 +1,660 @@
+[
+  {
+    "id": "pwd",
+    "categoria": "navegacao",
+    "comando": "pwd",
+    "descricao": "Mostra o caminho completo da pasta atual.",
+    "exemplo": "pwd"
+  },
+  {
+    "id": "cd",
+    "categoria": "navegacao",
+    "comando": "cd",
+    "descricao": "Vai para uma pasta específica.",
+    "exemplo": "cd /caminho"
+  },
+  {
+    "id": "cd-voltar",
+    "categoria": "navegacao",
+    "comando": "cd ..",
+    "descricao": "Volta uma pasta (para a pasta pai).",
+    "exemplo": "cd .."
+  },
+  {
+    "id": "cd-home",
+    "categoria": "navegacao",
+    "comando": "cd ~",
+    "descricao": "Vai direto para a pasta pessoal do usuário.",
+    "exemplo": "cd ~"
+  },
+  {
+    "id": "ls",
+    "categoria": "navegacao",
+    "comando": "ls",
+    "descricao": "Lista os arquivos e pastas do diretório atual.",
+    "exemplo": "ls"
+  },
+  {
+    "id": "ls-la",
+    "categoria": "navegacao",
+    "comando": "ls -la",
+    "descricao": "Lista arquivos com detalhes (permissões, dono, tamanho) e incluindo arquivos ocultos.",
+    "exemplo": "ls -la"
+  },
+  {
+    "id": "touch",
+    "categoria": "arquivos",
+    "comando": "touch",
+    "descricao": "Cria um arquivo vazio.",
+    "exemplo": "touch arquivo.txt"
+  },
+  {
+    "id": "mkdir",
+    "categoria": "arquivos",
+    "comando": "mkdir",
+    "descricao": "Cria uma pasta nova.",
+    "exemplo": "mkdir ~/projetos"
+  },
+  {
+    "id": "rm",
+    "categoria": "arquivos",
+    "comando": "rm",
+    "descricao": "Apaga um arquivo. Cuidado: não manda para lixeira, é permanente.",
+    "exemplo": "rm arquivo.txt"
+  },
+  {
+    "id": "nano",
+    "categoria": "arquivos",
+    "comando": "nano",
+    "descricao": "Abre um editor de texto simples direto no terminal.",
+    "exemplo": "nano arquivo.txt"
+  },
+  {
+    "id": "cp",
+    "categoria": "arquivos",
+    "comando": "cp",
+    "descricao": "Copia um arquivo (o original continua no lugar).",
+    "exemplo": "cp arquivo.txt ~/Documentos/"
+  },
+  {
+    "id": "cp-r",
+    "categoria": "arquivos",
+    "comando": "cp -r",
+    "descricao": "Copia uma pasta inteira. O -r (recursivo) é obrigatório para pastas.",
+    "exemplo": "cp -r pasta/ ~/Documentos/"
+  },
+  {
+    "id": "mv",
+    "categoria": "arquivos",
+    "comando": "mv",
+    "descricao": "Move um arquivo (recorta e cola). Também serve para renomear.",
+    "exemplo": "mv arquivo.txt ~/Documentos/"
+  },
+  {
+    "id": "mv-renomear",
+    "categoria": "arquivos",
+    "comando": "mv (renomear)",
+    "descricao": "Usa o mv para renomear um arquivo, informando o nome novo no lugar do destino.",
+    "exemplo": "mv nomeantigo.txt nomenovo.txt"
+  },
+  {
+    "id": "nemo",
+    "categoria": "arquivos",
+    "comando": "nemo .",
+    "descricao": "Abre a pasta atual no gerenciador de arquivos gráfico (Nemo, padrão do Mint).",
+    "exemplo": "nemo ."
+  },
+  {
+    "id": "xdg-open",
+    "categoria": "arquivos",
+    "comando": "xdg-open",
+    "descricao": "Abre um arquivo ou pasta com o programa padrão do sistema. Funciona em qualquer distro Linux.",
+    "exemplo": "xdg-open ."
+  },
+  {
+    "id": "df",
+    "categoria": "sistema",
+    "comando": "df -h",
+    "descricao": "Mostra o espaço usado e disponível no HD/SSD, em formato legível (GB/MB).",
+    "exemplo": "df -h"
+  },
+  {
+    "id": "free",
+    "categoria": "sistema",
+    "comando": "free -h",
+    "descricao": "Mostra quanto de memória RAM está instalada e em uso.",
+    "exemplo": "free -h"
+  },
+  {
+    "id": "top",
+    "categoria": "sistema",
+    "comando": "top",
+    "descricao": "Monitor de processos em tempo real. Ctrl+C para sair.",
+    "exemplo": "top"
+  },
+  {
+    "id": "history",
+    "categoria": "sistema",
+    "comando": "history",
+    "descricao": "Mostra a lista numerada de todos os comandos já digitados no terminal.",
+    "exemplo": "history"
+  },
+  {
+    "id": "clear",
+    "categoria": "sistema",
+    "comando": "clear",
+    "descricao": "Limpa a tela do terminal.",
+    "exemplo": "clear"
+  },
+  {
+    "id": "which",
+    "categoria": "sistema",
+    "comando": "which",
+    "descricao": "Mostra o caminho do executável de um programa, confirmando que ele existe.",
+    "exemplo": "which nome-do-programa"
+  },
+  {
+    "id": "whereis",
+    "categoria": "sistema",
+    "comando": "whereis",
+    "descricao": "Parecido com o which, mas também mostra manual e arquivos de configuração.",
+    "exemplo": "whereis nome-do-programa"
+  },
+  {
+    "id": "apropos",
+    "categoria": "sistema",
+    "comando": "apropos",
+    "descricao": "Busca nas descrições de todos os manuais instalados — útil quando não lembra o nome do comando, só o que ele faz.",
+    "exemplo": "apropos compress"
+  },
+  {
+    "id": "alias",
+    "categoria": "sistema",
+    "comando": "alias",
+    "descricao": "Cria um apelido para um comando longo, editando o arquivo ~/.bashrc. Depois de salvar, rode 'source ~/.bashrc' para funcionar.",
+    "exemplo": "alias abrirpastas='nemo .'"
+  },
+  {
+    "id": "apt-update",
+    "categoria": "pacotes",
+    "comando": "sudo apt update",
+    "descricao": "Atualiza a lista de programas disponíveis nos repositórios. Sempre rodar antes de instalar algo.",
+    "exemplo": "sudo apt update && sudo apt upgrade"
+  },
+  {
+    "id": "apt-upgrade",
+    "categoria": "pacotes",
+    "comando": "sudo apt upgrade",
+    "descricao": "Atualiza todos os programas já instalados para a versão mais recente.",
+    "exemplo": "sudo apt upgrade"
+  },
+  {
+    "id": "apt-install",
+    "categoria": "pacotes",
+    "comando": "sudo apt install",
+    "descricao": "Instala um ou mais programas pelo nome.",
+    "exemplo": "sudo apt install prog1 prog2 prog3"
+  },
+  {
+    "id": "apt-remove",
+    "categoria": "pacotes",
+    "comando": "sudo apt remove",
+    "descricao": "Remove um programa, mas mantém os arquivos de configuração.",
+    "exemplo": "sudo apt remove nomedoprograma"
+  },
+  {
+    "id": "apt-purge",
+    "categoria": "pacotes",
+    "comando": "sudo apt purge",
+    "descricao": "Remove um programa completamente, incluindo as configurações.",
+    "exemplo": "sudo apt purge nomedoprograma"
+  },
+  {
+    "id": "apt-autoremove",
+    "categoria": "pacotes",
+    "comando": "sudo apt autoremove",
+    "descricao": "Remove dependências que não são mais necessárias por nenhum programa instalado.",
+    "exemplo": "sudo apt autoremove"
+  },
+  {
+    "id": "apt-search",
+    "categoria": "pacotes",
+    "comando": "apt search",
+    "descricao": "Pesquisa pacotes disponíveis nos repositórios pelo nome ou palavra-chave.",
+    "exemplo": "apt search nome"
+  },
+  {
+    "id": "apt-show",
+    "categoria": "pacotes",
+    "comando": "apt show",
+    "descricao": "Mostra detalhes de um pacote (versão, tamanho, descrição).",
+    "exemplo": "apt show nomedoprograma"
+  },
+  {
+    "id": "apt-list-installed",
+    "categoria": "pacotes",
+    "comando": "apt list --installed",
+    "descricao": "Lista os pacotes instalados via APT, filtrando por nome com grep.",
+    "exemplo": "apt list --installed | grep nome"
+  },
+  {
+    "id": "dpkg-i",
+    "categoria": "pacotes",
+    "comando": "sudo dpkg -i",
+    "descricao": "Instala um arquivo .deb baixado manualmente.",
+    "exemplo": "sudo dpkg -i arquivo.deb"
+  },
+  {
+    "id": "apt-f-install",
+    "categoria": "pacotes",
+    "comando": "sudo apt -f install",
+    "descricao": "Corrige erros de dependência depois de instalar um .deb com dpkg.",
+    "exemplo": "sudo apt -f install"
+  },
+  {
+    "id": "dpkg-l-list",
+    "categoria": "pacotes",
+    "comando": "dpkg -L",
+    "descricao": "Mostra onde os arquivos de um pacote .deb instalado ficaram espalhados pelo sistema.",
+    "exemplo": "dpkg -L google-chrome-stable"
+  },
+  {
+    "id": "dpkg-l-grep",
+    "categoria": "pacotes",
+    "comando": "dpkg -l | grep",
+    "descricao": "Lista pacotes instalados filtrando pelo nome, quando não se sabe o nome exato do pacote.",
+    "exemplo": "dpkg -l | grep code"
+  },
+  {
+    "id": "dpkg-s",
+    "categoria": "pacotes",
+    "comando": "dpkg -S",
+    "descricao": "Descobre a qual pacote instalado pertence um arquivo específico.",
+    "exemplo": "dpkg -S /usr/bin/code"
+  },
+  {
+    "id": "flatpak-install",
+    "categoria": "pacotes",
+    "comando": "flatpak install",
+    "descricao": "Instala um programa pelo Flatpak, formato universal muito usado no Mint.",
+    "exemplo": "flatpak install flathub nome-do-app"
+  },
+  {
+    "id": "snap-install",
+    "categoria": "pacotes",
+    "comando": "sudo snap install",
+    "descricao": "Instala um programa pelo Snap, similar ao Flatpak.",
+    "exemplo": "sudo snap install nome-do-app"
+  },
+  {
+    "id": "wget",
+    "categoria": "pacotes",
+    "comando": "wget",
+    "descricao": "Baixa um arquivo direto da internet pelo terminal.",
+    "exemplo": "wget https://link.com/arquivo"
+  },
+  {
+    "id": "appimage-chmod",
+    "categoria": "pacotes",
+    "comando": "chmod +x arquivo.AppImage",
+    "descricao": "Dá permissão de execução a um AppImage antes de rodá-lo. AppImage não se instala, roda direto de onde está.",
+    "exemplo": "chmod +x nome-do-programa.AppImage"
+  },
+  {
+    "id": "appimage-run",
+    "categoria": "pacotes",
+    "comando": "./arquivo.AppImage",
+    "descricao": "Executa o AppImage depois de dar permissão com chmod +x.",
+    "exemplo": "./nome-do-programa.AppImage"
+  },
+  {
+    "id": "libfuse2",
+    "categoria": "pacotes",
+    "comando": "sudo apt install libfuse2",
+    "descricao": "Corrige o erro de FUSE que alguns AppImages mais novos apresentam ao rodar.",
+    "exemplo": "sudo apt install libfuse2"
+  },
+  {
+    "id": "tab-autocomplete",
+    "categoria": "atalhos-terminal",
+    "comando": "Tab",
+    "descricao": "Autocompleta comandos e nomes de arquivos. Duas vezes mostra todas as opções disponíveis.",
+    "exemplo": "cd ~/Down<Tab>"
+  },
+  {
+    "id": "setas-historico",
+    "categoria": "atalhos-terminal",
+    "comando": "↑ / ↓",
+    "descricao": "Navega pelo histórico de comandos já digitados.",
+    "exemplo": "↑"
+  },
+  {
+    "id": "ctrl-c",
+    "categoria": "atalhos-terminal",
+    "comando": "Ctrl + C",
+    "descricao": "Cancela o comando que está rodando no momento.",
+    "exemplo": "Ctrl + C"
+  },
+  {
+    "id": "ctrl-l",
+    "categoria": "atalhos-terminal",
+    "comando": "Ctrl + L",
+    "descricao": "Limpa a tela do terminal (equivalente ao comando clear).",
+    "exemplo": "Ctrl + L"
+  },
+  {
+    "id": "ctrl-shift-c",
+    "categoria": "atalhos-terminal",
+    "comando": "Ctrl + Shift + C",
+    "descricao": "Copia texto selecionado no terminal (o Ctrl+C normal cancela comandos).",
+    "exemplo": "Ctrl + Shift + C"
+  },
+  {
+    "id": "ctrl-shift-v",
+    "categoria": "atalhos-terminal",
+    "comando": "Ctrl + Shift + V",
+    "descricao": "Cola texto no terminal (o Ctrl+V normal não funciona no terminal).",
+    "exemplo": "Ctrl + Shift + V"
+  },
+  {
+    "id": "ctrl-a",
+    "categoria": "atalhos-terminal",
+    "comando": "Ctrl + A",
+    "descricao": "Vai para o início da linha atual no terminal.",
+    "exemplo": "Ctrl + A"
+  },
+  {
+    "id": "ctrl-e",
+    "categoria": "atalhos-terminal",
+    "comando": "Ctrl + E",
+    "descricao": "Vai para o fim da linha atual no terminal.",
+    "exemplo": "Ctrl + E"
+  },
+  {
+    "id": "ctrl-u",
+    "categoria": "atalhos-terminal",
+    "comando": "Ctrl + U",
+    "descricao": "Apaga toda a linha atual digitada no terminal.",
+    "exemplo": "Ctrl + U"
+  },
+  {
+    "id": "ctrl-z",
+    "categoria": "atalhos-terminal",
+    "comando": "Ctrl + Z",
+    "descricao": "Pausa o processo em execução no terminal.",
+    "exemplo": "Ctrl + Z"
+  },
+  {
+    "id": "ctrl-r",
+    "categoria": "atalhos-terminal",
+    "comando": "Ctrl + R",
+    "descricao": "Busca reversa no histórico: comece a digitar parte de um comando já usado e ele aparece automaticamente.",
+    "exemplo": "Ctrl + R"
+  },
+  {
+    "id": "inxi",
+    "categoria": "hardware",
+    "comando": "sudo inxi -Fxz",
+    "descricao": "Visão geral completa do hardware: CPU, memória, GPU, disco, rede — tudo de uma vez.",
+    "exemplo": "sudo inxi -Fxz"
+  },
+  {
+    "id": "lscpu",
+    "categoria": "hardware",
+    "comando": "lscpu",
+    "descricao": "Mostra modelo do processador, núcleos, velocidade e arquitetura.",
+    "exemplo": "lscpu"
+  },
+  {
+    "id": "dmidecode-memory",
+    "categoria": "hardware",
+    "comando": "sudo dmidecode -t memory",
+    "descricao": "Mostra detalhes das memórias RAM instaladas: tipo, velocidade e tamanho de cada pente.",
+    "exemplo": "sudo dmidecode -t memory | grep -E \"Size|Type|Speed\""
+  },
+  {
+    "id": "dmidecode-baseboard",
+    "categoria": "hardware",
+    "comando": "sudo dmidecode -t baseboard",
+    "descricao": "Mostra fabricante, modelo e versão da placa-mãe.",
+    "exemplo": "sudo dmidecode -t baseboard"
+  },
+  {
+    "id": "lspci-vga",
+    "categoria": "hardware",
+    "comando": "lspci | grep -i vga",
+    "descricao": "Mostra qual placa de vídeo (GPU) está instalada.",
+    "exemplo": "lspci | grep -i vga"
+  },
+  {
+    "id": "lsblk",
+    "categoria": "hardware",
+    "comando": "lsblk",
+    "descricao": "Lista todos os discos e partições com seus tamanhos.",
+    "exemplo": "lsblk"
+  },
+  {
+    "id": "lshw",
+    "categoria": "hardware",
+    "comando": "sudo lshw -short",
+    "descricao": "Lista todo o hardware em formato resumido — equivalente ao Gerenciador de Dispositivos do Windows.",
+    "exemplo": "sudo lshw -short"
+  },
+  {
+    "id": "ip-addr",
+    "categoria": "rede",
+    "comando": "ip addr show",
+    "descricao": "Mostra todas as interfaces de rede e os IPs atribuídos a cada uma. Substituto moderno do ifconfig.",
+    "exemplo": "ip a"
+  },
+  {
+    "id": "ip-link",
+    "categoria": "rede",
+    "comando": "ip link show",
+    "descricao": "Mostra as interfaces de rede sem IPs — foca no estado físico (up/down), MAC address e MTU.",
+    "exemplo": "ip link show"
+  },
+  {
+    "id": "ip-route",
+    "categoria": "rede",
+    "comando": "ip route show",
+    "descricao": "Mostra a tabela de rotas: por onde o tráfego é enviado dependendo do destino. 'default via' é a rota padrão (gateway).",
+    "exemplo": "ip r"
+  },
+  {
+    "id": "ip-route-add",
+    "categoria": "rede",
+    "comando": "sudo ip route add",
+    "descricao": "Adiciona uma rota manualmente na tabela de roteamento.",
+    "exemplo": "sudo ip route add 10.0.0.0/24 via 192.168.1.1"
+  },
+  {
+    "id": "ip-route-del",
+    "categoria": "rede",
+    "comando": "sudo ip route del",
+    "descricao": "Remove uma rota manualmente da tabela de roteamento.",
+    "exemplo": "sudo ip route del 10.0.0.0/24"
+  },
+  {
+    "id": "ping",
+    "categoria": "rede",
+    "comando": "ping",
+    "descricao": "Testa se um host responde e mede a latência. Use -c para limitar o número de pacotes.",
+    "exemplo": "ping -c 4 8.8.8.8"
+  },
+  {
+    "id": "traceroute",
+    "categoria": "rede",
+    "comando": "traceroute",
+    "descricao": "Mostra o caminho (cada salto/roteador) que os pacotes percorrem até o destino. Bom para achar onde a conexão trava.",
+    "exemplo": "traceroute google.com"
+  },
+  {
+    "id": "mtr",
+    "categoria": "rede",
+    "comando": "mtr",
+    "descricao": "Combina ping e traceroute em tempo real, atualizando continuamente. Útil para diagnosticar instabilidade.",
+    "exemplo": "mtr google.com"
+  },
+  {
+    "id": "dig",
+    "categoria": "rede",
+    "comando": "dig",
+    "descricao": "Consulta o DNS para descobrir qual IP corresponde a um domínio.",
+    "exemplo": "dig google.com"
+  },
+  {
+    "id": "nslookup",
+    "categoria": "rede",
+    "comando": "nslookup",
+    "descricao": "Mesma função do dig, mas com uma saída mais simples de ler para iniciantes.",
+    "exemplo": "nslookup google.com"
+  },
+  {
+    "id": "resolvectl",
+    "categoria": "rede",
+    "comando": "resolvectl status",
+    "descricao": "Mostra quais servidores DNS estão configurados na máquina.",
+    "exemplo": "resolvectl status"
+  },
+  {
+    "id": "ss",
+    "categoria": "rede",
+    "comando": "ss -tulnp",
+    "descricao": "Lista conexões de rede ativas e portas abertas na máquina. Substituiu o antigo netstat.",
+    "exemplo": "ss -tulnp"
+  },
+  {
+    "id": "nmcli-status",
+    "categoria": "rede",
+    "comando": "nmcli device status",
+    "descricao": "Mostra o estado geral das interfaces de rede pela linha de comando.",
+    "exemplo": "nmcli device status"
+  },
+  {
+    "id": "nmcli-wifi-list",
+    "categoria": "rede",
+    "comando": "nmcli device wifi list",
+    "descricao": "Lista as redes Wi-Fi disponíveis.",
+    "exemplo": "nmcli device wifi list"
+  },
+  {
+    "id": "nmcli-wifi-connect",
+    "categoria": "rede",
+    "comando": "nmcli device wifi connect",
+    "descricao": "Conecta a uma rede Wi-Fi pelo terminal, sem abrir a interface gráfica.",
+    "exemplo": "nmcli device wifi connect \"NomeDaRede\" password \"senha123\""
+  },
+  {
+    "id": "wildcard-asterisco",
+    "categoria": "wildcards",
+    "comando": "*",
+    "descricao": "Substitui qualquer sequência de caracteres (zero ou mais). O curinga mais usado.",
+    "exemplo": "ls *.txt"
+  },
+  {
+    "id": "wildcard-interrogacao",
+    "categoria": "wildcards",
+    "comando": "?",
+    "descricao": "Substitui exatamente um caractere, nem mais nem menos.",
+    "exemplo": "ls foto?.jpg"
+  },
+  {
+    "id": "wildcard-colchetes",
+    "categoria": "wildcards",
+    "comando": "[ ]",
+    "descricao": "Combina com um único caractere dentre um conjunto específico. Aceita intervalos (a-z) e negação (!).",
+    "exemplo": "ls foto[123].jpg"
+  },
+  {
+    "id": "wildcard-chaves",
+    "categoria": "wildcards",
+    "comando": "{ }",
+    "descricao": "Expansão de chaves: gera múltiplas strings de uma vez, antes de qualquer busca de arquivo.",
+    "exemplo": "cp relatorio.{doc,pdf,txt} ~/backup/"
+  },
+  {
+    "id": "cp-r-asterisco",
+    "categoria": "wildcards",
+    "comando": "cp -r origem/* destino/",
+    "descricao": "Copia todo o conteúdo visível de uma pasta. Não pega arquivos ocultos (os que começam com ponto).",
+    "exemplo": "cp -r /origem/* /destino/"
+  },
+  {
+    "id": "cp-r-ponto",
+    "categoria": "wildcards",
+    "comando": "cp -r origem/. destino/",
+    "descricao": "Copia todo o conteúdo de uma pasta, incluindo arquivos ocultos (diferente do *).",
+    "exemplo": "cp -r /origem/. /destino/"
+  },
+  {
+    "id": "rsync",
+    "categoria": "wildcards",
+    "comando": "rsync -av",
+    "descricao": "Alternativa mais segura ao cp para clonar uma pasta inteira, preservando permissões e datas.",
+    "exemplo": "rsync -av ~/origem/ ~/destino/"
+  },
+  {
+    "id": "find",
+    "categoria": "wildcards",
+    "comando": "find",
+    "descricao": "Busca arquivos em subpastas, com filtros por nome, data ou tamanho.",
+    "exemplo": "find . -name \"*.pdf\""
+  },
+  {
+    "id": "grep-arquivos",
+    "categoria": "wildcards",
+    "comando": "grep -l",
+    "descricao": "Busca arquivos pelo conteúdo dentro deles, não pelo nome.",
+    "exemplo": "grep -l \"erro\" *.log"
+  },
+  {
+    "id": "chmod-script",
+    "categoria": "sistema",
+    "comando": "chmod +x",
+    "descricao": "Dá permissão de execução a um arquivo. No Linux, arquivos não são executáveis por padrão.",
+    "exemplo": "chmod +x ~/projetos/ola.sh"
+  },
+  {
+    "id": "executar-script",
+    "categoria": "sistema",
+    "comando": "./script.sh",
+    "descricao": "Executa um script depois de dar permissão com chmod +x.",
+    "exemplo": "./projetos/ola.sh"
+  },
+  {
+    "id": "firefox-pathutils",
+    "categoria": "personalizacao",
+    "comando": "PathUtils.join (Console do Firefox)",
+    "descricao": "Retorna o caminho exato onde o Firefox espera o arquivo userChrome.css, independente da versão ou perfil ativo.",
+    "exemplo": "PathUtils.join(PathUtils.profileDir, \"chrome\", \"userChrome.css\")"
+  },
+  {
+    "id": "firefox-toggle-css",
+    "categoria": "personalizacao",
+    "comando": "toolkit.legacyUserProfileCustomizations.stylesheets",
+    "descricao": "Preferência do about:config que precisa estar em 'true' para o userChrome.css funcionar.",
+    "exemplo": "about:config → toolkit.legacyUserProfileCustomizations.stylesheets → true"
+  },
+  {
+    "id": "firefox-devtools-chrome",
+    "categoria": "personalizacao",
+    "comando": "devtools.chrome.enabled",
+    "descricao": "Preferência do about:config que precisa estar em 'true' para usar o Console do Navegador (Browser Toolbox).",
+    "exemplo": "about:config → devtools.chrome.enabled → true"
+  },
+  {
+    "id": "firefox-console-navegador",
+    "categoria": "personalizacao",
+    "comando": "Ctrl + Shift + J",
+    "descricao": "Abre o Console do Navegador do Firefox, usado para inspecionar e testar mudanças de interface.",
+    "exemplo": "Ctrl + Shift + J"
+  },
+  {
+    "id": "nano-userchrome",
+    "categoria": "personalizacao",
+    "comando": "nano userChrome.css",
+    "descricao": "Edita o arquivo userChrome.css do Firefox direto pelo terminal.",
+    "exemplo": "nano \"/home/jonathas/.config/mozilla/firefox/WWOdnEb2.Perfil 1/chrome/userChrome.css\""
+  }
+]
