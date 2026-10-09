@@ -56,6 +56,13 @@
     "exemplo": "mkdir ~/projetos"
   },
   {
+    "id": "mkdir-p",
+    "categoria": "arquivos",
+    "comando": "mkdir -p",
+    "descricao": "Cria a pasta e todas as pastas intermediárias que ainda não existirem. Não dá erro se a pasta já existir.",
+    "exemplo": "mkdir -p ~/backup/2026/outubro"
+  },
+  {
     "id": "rm",
     "categoria": "arquivos",
     "comando": "rm",
@@ -68,6 +75,20 @@
     "comando": "nano",
     "descricao": "Abre um editor de texto simples direto no terminal.",
     "exemplo": "nano arquivo.txt"
+  },
+  {
+    "id": "nano-salvar",
+    "categoria": "arquivos",
+    "comando": "Ctrl+O, Enter, Ctrl+X",
+    "descricao": "Dentro do nano: Ctrl+O salva (confirme com Enter) e Ctrl+X sai do editor.",
+    "exemplo": "Ctrl+O, Enter, Ctrl+X"
+  },
+  {
+    "id": "cat",
+    "categoria": "arquivos",
+    "comando": "cat",
+    "descricao": "Mostra o conteúdo de um arquivo de texto direto no terminal.",
+    "exemplo": "cat arquivo.txt"
   },
   {
     "id": "cp",
@@ -112,6 +133,13 @@
     "exemplo": "xdg-open ."
   },
   {
+    "id": "ctrl-h",
+    "categoria": "arquivos",
+    "comando": "Ctrl + H",
+    "descricao": "No gerenciador de arquivos gráfico, mostra ou esconde os arquivos ocultos (os que começam com ponto).",
+    "exemplo": "Ctrl + H"
+  },
+  {
     "id": "df",
     "categoria": "sistema",
     "comando": "df -h",
@@ -140,11 +168,60 @@
     "exemplo": "history"
   },
   {
+    "id": "history-grep",
+    "categoria": "sistema",
+    "comando": "history | grep",
+    "descricao": "Filtra o histórico mostrando só os comandos que contêm uma palavra. Útil para achar um comando que você já usou.",
+    "exemplo": "history | grep firefox"
+  },
+  {
     "id": "clear",
     "categoria": "sistema",
     "comando": "clear",
     "descricao": "Limpa a tela do terminal.",
     "exemplo": "clear"
+  },
+  {
+    "id": "man",
+    "categoria": "sistema",
+    "comando": "man",
+    "descricao": "Abre o manual de qualquer comando. Use as setas para rolar e q para sair.",
+    "exemplo": "man ls"
+  },
+  {
+    "id": "sudo",
+    "categoria": "sistema",
+    "comando": "sudo",
+    "descricao": "\"Super User Do\": executa um comando como administrador (equivale a \"Executar como administrador\" no Windows). Necessário para modificar o sistema. Nunca use em comandos que você não conhece.",
+    "exemplo": "sudo apt update"
+  },
+  {
+    "id": "background",
+    "categoria": "sistema",
+    "comando": "&",
+    "descricao": "Colocado no final de um comando, roda o programa em segundo plano e deixa o terminal livre.",
+    "exemplo": "google-chrome &"
+  },
+  {
+    "id": "python-version",
+    "categoria": "sistema",
+    "comando": "python3 --version",
+    "descricao": "Mostra a versão do Python instalada, confirmando que ele está disponível.",
+    "exemplo": "python3 --version"
+  },
+  {
+    "id": "echo",
+    "categoria": "sistema",
+    "comando": "echo",
+    "descricao": "Imprime um texto no terminal. É o comando mais básico de um script bash.",
+    "exemplo": "echo \"Olá, Linux!\""
+  },
+  {
+    "id": "shebang",
+    "categoria": "sistema",
+    "comando": "#!/bin/bash",
+    "descricao": "Primeira linha de um script: diz ao sistema que o arquivo deve ser executado com o bash.",
+    "exemplo": "#!/bin/bash"
   },
   {
     "id": "which",
@@ -392,6 +469,13 @@
     "exemplo": "Ctrl + R"
   },
   {
+    "id": "ctrl-d",
+    "categoria": "atalhos-terminal",
+    "comando": "Ctrl + D",
+    "descricao": "Encerra a sessão atual do terminal. Numa conexão SSH, equivale ao comando exit.",
+    "exemplo": "Ctrl + D"
+  },
+  {
     "id": "inxi",
     "categoria": "hardware",
     "comando": "sudo inxi -Fxz",
@@ -474,6 +558,20 @@
     "comando": "sudo ip route del",
     "descricao": "Remove uma rota manualmente da tabela de roteamento.",
     "exemplo": "sudo ip route del 10.0.0.0/24"
+  },
+  {
+    "id": "hostname",
+    "categoria": "rede",
+    "comando": "hostname",
+    "descricao": "Mostra o nome da máquina onde o comando está rodando. Útil para saber em qual computador você está ao usar SSH.",
+    "exemplo": "hostname"
+  },
+  {
+    "id": "hostname-i",
+    "categoria": "rede",
+    "comando": "hostname -I",
+    "descricao": "Mostra os IPs da máquina na rede local (ex: 192.168.x.x). Se um dispositivo parar de achar sua pasta compartilhada, rode de novo: o IP pode ter mudado.",
+    "exemplo": "hostname -I"
   },
   {
     "id": "ping",
@@ -609,6 +707,13 @@
     "exemplo": "grep -l \"erro\" *.log"
   },
   {
+    "id": "grep-n",
+    "categoria": "wildcards",
+    "comando": "grep -n",
+    "descricao": "Acha em qual linha de um arquivo está um texto. O -n mostra o número da linha.",
+    "exemplo": "grep -n \"read\" /etc/samba/smb.conf"
+  },
+  {
     "id": "chmod-script",
     "categoria": "sistema",
     "comando": "chmod +x",
@@ -656,5 +761,264 @@
     "comando": "nano userChrome.css",
     "descricao": "Edita o arquivo userChrome.css do Firefox direto pelo terminal.",
     "exemplo": "nano \"/home/jonathas/.config/mozilla/firefox/WWOdnEb2.Perfil 1/chrome/userChrome.css\""
+  },
+  {
+    "id": "samba-install",
+    "categoria": "samba",
+    "comando": "sudo apt install samba",
+    "descricao": "Instala o Samba, programa que compartilha pastas do Linux na rede privada (protocolo SMB, o mesmo do Windows).",
+    "exemplo": "sudo apt install samba"
+  },
+  {
+    "id": "samba-conf",
+    "categoria": "samba",
+    "comando": "sudo nano /etc/samba/smb.conf",
+    "descricao": "Edita a configuração do Samba. A pasta compartilhada é declarada no final do arquivo, com path, read only, browseable e guest ok.",
+    "exemplo": "sudo nano /etc/samba/smb.conf"
+  },
+  {
+    "id": "samba-passwd",
+    "categoria": "samba",
+    "comando": "sudo smbpasswd -a",
+    "descricao": "Cria a senha de rede do Samba para um usuário. Essa senha é separada da senha de login do Linux.",
+    "exemplo": "sudo smbpasswd -a jonathas"
+  },
+  {
+    "id": "samba-testparm",
+    "categoria": "samba",
+    "comando": "testparm -s",
+    "descricao": "Verifica erros no smb.conf e mostra o resultado direto. Sem o -s, ele pede Enter para mostrar a configuração. Rode sempre depois de editar o arquivo.",
+    "exemplo": "testparm -s"
+  },
+  {
+    "id": "samba-restart",
+    "categoria": "samba",
+    "comando": "sudo systemctl restart smbd",
+    "descricao": "Reinicia o serviço do Samba para aplicar mudanças no smb.conf.",
+    "exemplo": "sudo systemctl restart smbd"
+  },
+  {
+    "id": "samba-status",
+    "categoria": "samba",
+    "comando": "systemctl status smbd",
+    "descricao": "Mostra se o serviço do Samba está rodando. Procure 'active (running)' e saia com q.",
+    "exemplo": "systemctl status smbd"
+  },
+  {
+    "id": "samba-ufw",
+    "categoria": "samba",
+    "comando": "sudo ufw allow samba",
+    "descricao": "Libera o Samba no firewall, caso ele esteja ativo.",
+    "exemplo": "sudo ufw allow samba"
+  },
+  {
+    "id": "samba-ls-ld",
+    "categoria": "samba",
+    "comando": "ls -ld",
+    "descricao": "Mostra dono e permissões de uma pasta (sem listar o conteúdo). Use quando consegue entrar na pasta compartilhada, mas não consegue gravar arquivos.",
+    "exemplo": "ls -ld ~/Compartilhado"
+  },
+  {
+    "id": "samba-acesso-linux",
+    "categoria": "samba",
+    "comando": "smb://IP/Compartilhado",
+    "descricao": "Endereço para acessar a pasta compartilhada a partir de outro Linux: aperte Ctrl+L no Nemo e digite. O login é o usuário do Linux com a senha criada no smbpasswd.",
+    "exemplo": "smb://192.168.1.10/Compartilhado"
+  },
+  {
+    "id": "samba-acesso-windows",
+    "categoria": "samba",
+    "comando": "\\\\IP\\Compartilhado",
+    "descricao": "Endereço para acessar a pasta compartilhada a partir do Windows: digite na barra de endereços do Explorador de Arquivos.",
+    "exemplo": "\\\\192.168.1.10\\Compartilhado"
+  },
+  {
+    "id": "ssh-install-server",
+    "categoria": "ssh",
+    "comando": "sudo apt install openssh-server",
+    "descricao": "Instala o servidor SSH no computador que será acessado. No Mint ele não vem instalado (o cliente já vem).",
+    "exemplo": "sudo apt install openssh-server"
+  },
+  {
+    "id": "ssh-status",
+    "categoria": "ssh",
+    "comando": "sudo systemctl status ssh",
+    "descricao": "Mostra se o serviço SSH está rodando. Procure 'active (running)' e saia com q.",
+    "exemplo": "sudo systemctl status ssh"
+  },
+  {
+    "id": "ssh-enable",
+    "categoria": "ssh",
+    "comando": "sudo systemctl enable --now ssh",
+    "descricao": "Liga o serviço SSH agora e faz ele iniciar junto com o sistema.",
+    "exemplo": "sudo systemctl enable --now ssh"
+  },
+  {
+    "id": "ssh-conectar",
+    "categoria": "ssh",
+    "comando": "ssh usuario@endereco",
+    "descricao": "Conecta a outro computador pelo terminal. O endereço pode ser o IP ou o hostname. A senha não aparece enquanto você digita (é normal).",
+    "exemplo": "ssh jonathas@192.168.1.10"
+  },
+  {
+    "id": "ssh-exit",
+    "categoria": "ssh",
+    "comando": "exit",
+    "descricao": "Sai da sessão remota e volta para a sua máquina. Também funciona com Ctrl+D.",
+    "exemplo": "exit"
+  },
+  {
+    "id": "ssh-whoami",
+    "categoria": "ssh",
+    "comando": "whoami",
+    "descricao": "Mostra com qual usuário você está logado. Junto com hostname, ajuda a saber em qual máquina você está.",
+    "exemplo": "whoami"
+  },
+  {
+    "id": "scp-enviar",
+    "categoria": "ssh",
+    "comando": "scp",
+    "descricao": "Copia um arquivo do seu computador para o remoto, pela conexão SSH.",
+    "exemplo": "scp arquivo.txt usuario@endereco:/caminho/destino/"
+  },
+  {
+    "id": "scp-baixar",
+    "categoria": "ssh",
+    "comando": "scp (baixar)",
+    "descricao": "Faz o contrário: traz um arquivo remoto para a pasta atual. O ponto final significa 'aqui'.",
+    "exemplo": "scp usuario@endereco:/caminho/arquivo.txt ."
+  },
+  {
+    "id": "rsync-remoto",
+    "categoria": "ssh",
+    "comando": "rsync -avz",
+    "descricao": "Sincroniza pastas inteiras com outro computador, copiando só o que mudou. Ótimo para backups.",
+    "exemplo": "rsync -avz pasta/ usuario@endereco:/destino/"
+  },
+  {
+    "id": "ssh-keygen",
+    "categoria": "ssh",
+    "comando": "ssh-keygen -t ed25519",
+    "descricao": "Gera seu par de chaves (pública e privada) para login sem senha. Nunca compartilhe a chave privada (id_ed25519), só a pública (.pub).",
+    "exemplo": "ssh-keygen -t ed25519"
+  },
+  {
+    "id": "ssh-copy-id",
+    "categoria": "ssh",
+    "comando": "ssh-copy-id",
+    "descricao": "Envia sua chave pública para o servidor. Depois disso, o ssh entra sem pedir a senha da conta.",
+    "exemplo": "ssh-copy-id usuario@endereco"
+  },
+  {
+    "id": "ssh-config",
+    "categoria": "ssh",
+    "comando": "nano ~/.ssh/config",
+    "descricao": "Cria um atalho de conexão. Dentro do arquivo, defina Host, HostName e User; depois basta digitar 'ssh nome-do-host'.",
+    "exemplo": "nano ~/.ssh/config"
+  },
+  {
+    "id": "ssh-comando-unico",
+    "categoria": "ssh",
+    "comando": "ssh usuario@endereco \"comando\"",
+    "descricao": "Roda um único comando no computador remoto, sem abrir uma sessão interativa.",
+    "exemplo": "ssh jonathas@192.168.1.10 \"df -h\""
+  },
+  {
+    "id": "ssh-tunel",
+    "categoria": "ssh",
+    "comando": "ssh -L",
+    "descricao": "Cria um túnel: traz uma porta do computador remoto para o seu localhost, sem expor nada na internet.",
+    "exemplo": "ssh -L 8080:localhost:8096 usuario@endereco"
+  },
+  {
+    "id": "sshfs",
+    "categoria": "ssh",
+    "comando": "sshfs",
+    "descricao": "Monta uma pasta remota como se fosse uma pasta local. Precisa instalar antes com sudo apt install sshfs.",
+    "exemplo": "sshfs usuario@endereco:/pasta ~/remoto"
+  },
+  {
+    "id": "tmux-install",
+    "categoria": "ssh",
+    "comando": "sudo apt install tmux",
+    "descricao": "Instala o tmux, que mantém sessões vivas mesmo se a conexão SSH cair.",
+    "exemplo": "sudo apt install tmux"
+  },
+  {
+    "id": "tmux",
+    "categoria": "ssh",
+    "comando": "tmux",
+    "descricao": "Abre uma sessão persistente. O que estiver rodando nela não morre se a conexão cair.",
+    "exemplo": "tmux"
+  },
+  {
+    "id": "tmux-detach",
+    "categoria": "ssh",
+    "comando": "Ctrl + B, depois D",
+    "descricao": "Sai da sessão do tmux sem encerrá-la. Ela continua rodando em segundo plano.",
+    "exemplo": "Ctrl + B, depois D"
+  },
+  {
+    "id": "tmux-attach",
+    "categoria": "ssh",
+    "comando": "tmux attach",
+    "descricao": "Volta para a sessão do tmux que ficou rodando.",
+    "exemplo": "tmux attach"
+  },
+  {
+    "id": "ssh-abrir-programa",
+    "categoria": "ssh",
+    "comando": "DISPLAY=:0 nohup ./programa &",
+    "descricao": "Manda o PC remoto abrir um programa ou jogo na tela dele. DISPLAY=:0 escolhe a tela principal, nohup protege o programa se o SSH cair e & libera o terminal. Escreva DISPLAY=:0 sem espaços.",
+    "exemplo": "DISPLAY=:0 nohup ./soh.appimage &"
+  },
+  {
+    "id": "pgrep",
+    "categoria": "ssh",
+    "comando": "pgrep -a",
+    "descricao": "Mostra se um processo está rodando e o número dele.",
+    "exemplo": "pgrep -a soh"
+  },
+  {
+    "id": "pkill",
+    "categoria": "ssh",
+    "comando": "pkill -f",
+    "descricao": "Encerra um programa pelo nome. Útil quando ele trava.",
+    "exemplo": "pkill -f soh.appimage"
+  },
+  {
+    "id": "tailscale-ip",
+    "categoria": "ssh",
+    "comando": "tailscale ip -4",
+    "descricao": "Mostra o IP do Tailscale (algo como 100.x.x.x), usado para acessar o PC de fora de casa por uma VPN privada.",
+    "exemplo": "tailscale ip -4"
+  },
+  {
+    "id": "tailscale-status",
+    "categoria": "ssh",
+    "comando": "tailscale status",
+    "descricao": "Lista os aparelhos da sua rede Tailscale e mostra se estão online.",
+    "exemplo": "tailscale status"
+  },
+  {
+    "id": "reboot-poweroff",
+    "categoria": "ssh",
+    "comando": "sudo reboot / sudo poweroff",
+    "descricao": "Reinicia ou desliga o computador. Pelo SSH, permite controlar o PC remoto.",
+    "exemplo": "sudo reboot"
+  },
+  {
+    "id": "htop",
+    "categoria": "ssh",
+    "comando": "htop",
+    "descricao": "Monitor de processos, CPU e memória em tempo real, mais visual que o top. Instale com sudo apt install htop e saia com q.",
+    "exemplo": "htop"
+  },
+  {
+    "id": "systemctl-status",
+    "categoria": "ssh",
+    "comando": "systemctl status",
+    "descricao": "Mostra se um serviço está rodando. Para reiniciar um serviço travado, use sudo systemctl restart nome.",
+    "exemplo": "systemctl status nome-do-servico"
   }
 ]
